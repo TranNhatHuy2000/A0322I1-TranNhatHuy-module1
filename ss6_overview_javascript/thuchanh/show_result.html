@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<!--Hiển thị kết quả qua hàm alert-->
+    <button type="button" onclick="showMessage();">Show Message</button>
+        <script>
+            function showMessage() {
+                alert('xin chào');
+            }
+        </script>
+<br>
+<!--Hiển thị kết quả qua sủ dụng thẻ HTML-->
+    <button type="button" onclick="showMessage2()">Clic me!</button>
+    <div id="messageDiv"></div>
+        <script>
+            function showMessage2() {
+                document.getElementById('messageDiv').innerHTML = 'xin chào';
+            }
+        </script>
+    <br>
+<!--Hiển thị kết quả qua hàm document.write()-->
+    <button type="button" onclick="showMessage3()">Bấm zô</button>
+        <script>
+            function showMessage3() {
+                document.write('hello');
+            }
+        </script>
+<!--Hiển thị kết quả qua hàm console.log()-->
+    <button type="button" onclick="showMessage4()">Bấm xong bấm f12</button>
+        <script>
+            function showMessage4() {
+                console.log("xin chào");
+            }
+        </script>
+</body>
+</html>
