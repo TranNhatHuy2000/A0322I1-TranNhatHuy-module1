@@ -4,11 +4,53 @@
     <meta charset="UTF-8">
     <title>chessboard and calendar</title>
     <style>
-        chess-board { border-spacing: 0; border-collapse: collapse; }
-        .chess-board th { padding: .5em; }
-        .chess-board td { border: 1px solid; width: 2em; height: 2em; }
+        .chess-board {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .chess-board td { border: 1px solid; width: 100px; height: 100px; }
         .chess-board .light { background: #eee; }
         .chess-board .dark { background: #000; }
+        .a {
+            color: blue;
+        }
+        .clander  {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .clander td {
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+        .clander th {
+
+            padding: 20px;
+        }
+        .b {
+            border: 1px solid;
+            border-spacing: 200px;
+            color: white;
+            background-color:orange ;
+        }
+        .c {
+            background-color: #d61b06;
+        }
+        .d{
+            background-color: blue;
+        }
+        .e {
+            color:#d61b06 ;
+        }
+        sub {
+            color: black;
+        }
+        .f {
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -113,6 +155,76 @@
             <td class="light"></td>
             <td class="dark"></td>
             <td class="light"></td>
+        </tr>
+        </tbody>
+    </table>
+<br><hr>
+    <h1>Phần 2: Calendar</h1>
+    <h1 style="text-align: center" class="a">Tháng 10 - October</h1><br>
+    <table class="clander">
+        <tbody>
+        <tr class="b">
+            <th class="c">C.Nhật</th>
+            <th >T.Ba</th>
+            <th >T.Hai</th>
+            <th >T.Tư</th>
+            <th >T.Năm</th>
+            <th >T.Sáu</th>
+            <th class="d">T.Bảy</th>
+        </tr>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1<sub>13</sub></td>
+            <td>2<sub>14</sub></td>
+            <td class="f">3<sub>15</sub></td>
+        </tr>
+        <tr>
+            <td class="e">4<sub>16</sub></td>
+            <td>5<sub>17</sub></td>
+            <td>6<sub>18</sub></td>
+            <td>7<sub>19</sub></td>
+            <td>8<sub>20</sub></td>
+            <td>9<sub>21</sub></td>
+            <td  class="f">10<sub>22</sub></td>
+        </tr>
+        <tr>
+            <td class="e">11<sub>23</sub></td>
+            <td>12<sub>24</sub></td>
+            <td>13<sub>25</sub></td>
+            <td>14<sub>26</sub></td>
+            <td>15<sub>27</sub></td>
+            <td>16<sub>28</sub></td>
+            <td  class="f">17<sub>29</sub></td>
+        </tr>
+        <tr>
+            <td class="e">18<sub>1</sub></td>
+            <td>19<sub>2</sub></td>
+            <td>20<sub>2</sub></td>
+            <td>21<sub>3</sub></td>
+            <td>22<sub>4</sub></td>
+            <td>23<sub>5</sub></td>
+            <td class="f">24<sub>6</sub></td>
+        </tr>
+        <tr>
+            <td class="e">25<sub>7</sub></td>
+            <td>26<sub>8</sub></td>
+            <td>27<sub>9</sub></td>
+            <td>28<sub>10</sub></td>
+            <td>29<sub>11</sub></td>
+            <td>30<sub>12</sub></td>
+            <td  class="f">31<sub>13</sub></td>
         </tr>
         </tbody>
     </table>
