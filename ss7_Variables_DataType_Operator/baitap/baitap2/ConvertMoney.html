@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        table {
+            text-align: center;
+            border-spacing: 20px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <form action="ConvertMoney.html">
+        <table>
+            <tr>
+                <th>Amountt</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="input"/>
+                </td>
+                <td>
+                    <select id="from" name="from">
+                        <option value="usd">USD</option>
+                        <option value="vnd">VNĐ</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="to">
+                        <option value="vnd" >VNĐ</option>
+                        <option value="usd" >USD</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="convert()">convert</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="result"></p>
+    <script>
+        function convert(){
+            let amount = document.getElementById('input').value;
+            let from = document.getElementById('from').value;
+            let to = document.getElementById('to').value;
+            let result ;
+            if (from == 'usd' && to == 'vnd'){
+                 result = amount*23.5
+            }else if(from == 'vnd' && to == 'usd') {
+                result = amount/23.5
+            }else {
+                result = amount
+            }
+            document.getElementById('result').innerHTML = "result:"+""+ result+"(đơn vị tiền tệ)";
+        }
+    </script>
 </body>
 </html>

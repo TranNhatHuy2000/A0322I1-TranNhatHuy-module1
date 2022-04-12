@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính điểm trung và tổng các môn</title>
 </head>
 <body>
-$END$
+    <script>
+        let InputPhysics = prompt('Nhập điểm Lý:');
+        let InputChemistry = prompt('Nhập điểm Hóa:');
+        let InputBiology = prompt('Nhập điểm Sinh:');
+
+        let Physics = parseInt(InputPhysics);
+        let Chemistry = parseInt(InputChemistry);
+        let Biology = parseInt(InputBiology);
+
+        let total = Physics + Chemistry +Biology;
+        let medium = (Physics + Chemistry +Biology)/3;
+        alert('Điểm trung bình là:'+ medium+', Tổng là:'+total)
+    </script>
+
+
 </body>
 </html>
