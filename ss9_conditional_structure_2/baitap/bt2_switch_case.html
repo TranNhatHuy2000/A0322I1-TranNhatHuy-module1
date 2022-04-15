@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày trong tháng</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="nhập tháng:"/>
+    <button type="button" onclick="result()">Tính số ngày</button>
+    <p id="result"></p>
+    <script>
+
+        function result() {
+            let month = document.getElementById('input').value ;
+            let days ;
+            switch (month) {
+                case "1":;
+                case "3":;
+                case "5":;
+                case "7":;
+                case "9":;
+                case "11":;
+                    days = "31";
+                    break;
+                case "4":;
+                case "6":;
+                case "8":;
+                case "10":;
+                case "12":;
+                    days = "30";
+                    break;
+                case "2":
+                    days = "29";
+                    break;
+            }
+            document.getElementById("result").innerHTML = "Tháng " + month + " có: " + days + "ngày";
+        }
+
+    </script>
+</body>
+</html>
