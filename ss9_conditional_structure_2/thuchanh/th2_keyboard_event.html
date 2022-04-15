@@ -24,7 +24,7 @@
             nobita.style.left = parseInt(nobita.style.left) + 10 + "px";
         }
         
-        function moceSelect(evt) {
+        function moveSelect(evt) {
             switch (evt.keyCode) {
                 case 38: MoveUP();
                     break;
@@ -37,7 +37,7 @@
             }
         }
         function doReady(){
-            window.addEventListener("keydown", moceSelect)
+            window.addEventListener("keydown", moveSelect)
         }
     window.onload = doReady;
     </script>
