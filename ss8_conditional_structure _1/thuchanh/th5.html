@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toán tử 3 ngôi</title>
+</head>
+<body>
+    <script>
+       /* if ((a + b) < 4) {
+            result = 'Below';
+        } else {
+            result = 'Over';
+        }*/
+       //bài 1
+        let a = parseInt(prompt('nhap a')) ;
+        let b = parseInt(prompt('nhap b')) ;
+        let result = ((a+b) <4) ? 'Below' : 'Over';
+        alert(result);
+
+        //bài 2
+       /*let message;
+
+       if (login == 'Employee') {
+           message = 'Hello';
+       } else if (login == 'Director') {
+           message = 'Greetings';
+       } else if (login == '') {
+           message = 'No login';
+       } else {
+           message = '';
+       }*/
+        let message
+        let login = prompt('Nhập tin nhắn đi:');
+
+       (login == "Employee" ) ? message = 'Hello' :
+       (login == "Director" ) ? message = 'Greetings':
+       (login == "" ) ? message = 'Greetings':
+        message = "";
+
+       alert(message);
+    </script>
+</body>
+</html>
