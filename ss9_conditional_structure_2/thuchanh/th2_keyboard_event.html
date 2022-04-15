@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body>
+    <img src="nobita.png" id="nobita" style="position:absolute;left:0; top:0;" >
+    <script>
+        function MoveUP() {
+            let nobita = document.getElementById("nobita");
+            nobita.style.top = parseInt(nobita.style.top) - 10 + "px";
+        }
+        function MoveDown() {
+            let nobita = document.getElementById("nobita");
+            nobita.style.top = parseInt(nobita.style.top) + 10 + "px";
+        }
+        function MoveLeft() {
+            let nobita = document.getElementById("nobita");
+            nobita.style.left = parseInt(nobita.style.left) - 10 + "px";
+        }
+        function MoveRight() {
+            let nobita = document.getElementById("nobita");
+            nobita.style.left = parseInt(nobita.style.left) + 10 + "px";
+        }
+        
+        function moceSelect(evt) {
+            switch (evt.keyCode) {
+                case 38: MoveUP();
+                    break;
+                case 40: MoveDown();
+                    break;
+                case 37: MoveLeft();
+                    break;
+                case 39: MoveRight();
+                    break;
+            }
+        }
+        function doReady(){
+            window.addEventListener("keydown", moceSelect)
+        }
+    window.onload = doReady;
+    </script>
+</body>
+</html>
