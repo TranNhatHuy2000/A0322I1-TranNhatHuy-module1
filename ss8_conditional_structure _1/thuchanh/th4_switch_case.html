@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch case</title>
+</head>
+<body>
+    <script>
+       // bài 1
+        let browser = prompt("nhập trình duyệt của bạn");
+        switch (browser) {
+            case 'Edge':
+                alert("You've got the Edge!");
+                break;
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert('Okay we support these browsers too');
+                break;
+            default:
+                alert('We hope that this page looks ok!');
+        }
+
+        // bài 2
+       let a = prompt('a?', '');
+       switch (a) {
+           case '0':
+               alert('0');
+               break;
+           case '1':
+               alert('1');
+               break;
+           case '2':
+           case '3':
+               alert('2,3');
+               break;
+       }
+
+       //Bài 3
+      /* let value = prompt('Type a number', 0);
+
+       if (value > 0) {
+           alert(1);
+       } else if (value < 0) {
+           alert(-1);
+       } else {
+           alert(0);
+       }*/
+
+      let value = parseInt(prompt('Type a number'));
+       switch ((value > 0) ? 1 : (value < 0)  ? -1 : 0) {
+            case 1:
+                alert(1);
+                break;
+            case -1:
+                alert(-1)
+             default:
+                 alert(0);
+                 break;
+       }
+    </script>
+
+</body>
+</html>
