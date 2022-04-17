@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Game</title>
+    <style>
+        img {
+            display: block;
+            box-shadow: 2px 3px 3px black;
+            width: 600px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        for ( let i = 1; i<6 ; i++){
+            let imgcats = "funny-cat1_part" + i + "x1.jpg";
+            let imgpandas = "panda_swap_part" + i + "x1.jpg";
+            let imgmonkeys = "monkey_part" + i + "x1.jpg";
+            let random1 = [imgcats,imgpandas,imgmonkeys]
+            let random = random1[Math.floor(Math.random() * random1.length)]
+            let inner = "<img src='"+random+"'"+" id="+ "'"+i+"'"+" onclick=change("+ i + ")" +">"+"<br>"
+            console.log(inner)
+            document.writeln(inner);
+        }
+          function change(value) {
+            let swap;
+                switch (value) {
+                    case 1:
+                        swap = document.getElementById("1").src
+                        if (swap.indexOf("cat","panda") !== -1){
+                        document.getElementById("1").src = "monkey_part1x1.jpg"
+                        }else if (swap.indexOf("monkey","cat") !== -1){
+                            document.getElementById("1").src = "panda_swap_part1x1.jpg"
+                        }else if (swap.indexOf("panda","monkey") !== -1){
+                            document.getElementById("1").src = "funny-cat1_part1x1.jpg"
+                        }
+                        break
+                    case 2:
+                        swap = document.getElementById("2").src
+                        if (swap.indexOf("cat","panda") !== -1){
+                            document.getElementById("2").src = "monkey_part2x1.jpg"
+                        }else if (swap.indexOf("monkey","cat") !== -1){
+                            document.getElementById("2").src = "panda_swap_part2x1.jpg"
+                        }else if (swap.indexOf("panda","monkey") !== -1){
+                            document.getElementById("2").src = "funny-cat1_part2x1.jpg"
+                        }
+                        break
+                    case 3:
+                        swap = document.getElementById("3").src
+                        if (swap.indexOf("cat","panda") !== -1){
+                            document.getElementById("3").src = "monkey_part3x1.jpg"
+                        }else if (swap.indexOf("monkey","cat") !== -1){
+                            document.getElementById("3").src = "panda_swap_part3x1.jpg"
+                        }else if (swap.indexOf("panda","monkey") !== -1){
+                            document.getElementById("3").src = "funny-cat1_part3x1.jpg"
+                        }
+                        break
+                    case 4:
+                        swap = document.getElementById("4").src
+                        if (swap.indexOf("cat","panda") !== -1){
+                            document.getElementById("4").src = "monkey_part4x1.jpg"
+                        }else if (swap.indexOf("monkey","cat") !== -1){
+                            document.getElementById("4").src = "panda_swap_part4x1.jpg"
+                        }else if (swap.indexOf("panda","monkey") !== -1){
+                            document.getElementById("4").src = "funny-cat1_part4x1.jpg"
+                        }
+                        break
+                    case 5:
+                        swap = document.getElementById("5").src
+                        if (swap.indexOf("cat","panda") !== -1){
+                            document.getElementById("5").src = "monkey_part5x1.jpg"
+                        }else if (swap.indexOf("monkey","cat") !== -1){
+                            document.getElementById("5").src = "panda_swap_part5x1.jpg"
+                        }else if (swap.indexOf("panda","monkey") !== -1){
+                            document.getElementById("5").src = "funny-cat1_part5x1.jpg"
+                        }
+                        break
+                }
+          }
+    </script>
+</body>
+</html>
