@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+    <script>
+        let money = parseInt(prompt("nhập số tiền gửi (VNĐ):"));
+        let month = parseInt(prompt("nhập số tháng gửi:"));
+        let interest = parseInt(prompt("nhập số lãi suất:"))
+        let total = money * ((1+ interest)**month);
+        alert("tiền lãi là:"+total);
+    </script>
+</body>
+</html>

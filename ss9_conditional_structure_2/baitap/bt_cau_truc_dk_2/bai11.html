@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        /* cho 5 triệu đồng/tháng 0%;
+         Trên 5 - 10 triệu đồng/tháng: 5%;
+         Trên 11 - 20 triệu đồng: 10%;
+         Trên 21 - 30 triệu đồng/tháng: 15%;
+         Trên 30  triệu đồng/tháng: 20%;
+        * */
+        let tienluong = parseInt(prompt("nhập thu nhập cá nhân:"));
+        let thue;
+        let tong;
+        if (tienluong <= 5){
+            thue = 0 ;
+            tong = 0;
+
+        }else if(tienluong <= 10){
+            thue = 0.05;
+        }else if(tienluong <= 20){
+            thue = 0.1;
+        }else if(tienluong <= 30) {
+            thue = 0.15;
+        }else {
+            thue = 0.2;
+        }
+        tong = tienluong*thue;
+        alert("số tiền thuế phải trả là:"+tong);
+    </script>
+</body>
+</html>
