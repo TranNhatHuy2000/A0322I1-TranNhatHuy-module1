@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước số điện thoại gia đình</title>
+</head>
+<body>
+    <script>
+        /*Ta có: tiền điện thoại phải trả = tiền gọi theo phút + cước cố định = số phút . cước phí + cước cố định.
+        * Cước cố định  = 25000 (đồng)
+        * cước phí = 600 (đồng) nếu số phút <= 50
+        * cước phí = 400 (đồng) nếu số phút > 50 và <= 200
+        * cước phí = 200 (đồng) nếu số phút > 200
+        * */
+        let time = parseInt(prompt("nhap số phút đã nghe điện thoại:"));
+        let fixedFee = 25000;
+        let Fee ;
+        let total ;
+        if (time > 200){
+            Fee = 200;
+        }else if(time >= 50){
+            Fee = 400;
+        }else {
+            Fee = 600;
+        }
+        total = (time*Fee)+fixedFee
+        alert("số điện thoại bạn phải trả là: "+total+" (vnđ)")
+    </script>
+</body>
+</html>

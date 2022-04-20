@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học lực </title>
+</head>
+<body>
+    <script>
+        let baitap = parseInt(prompt("nhap diem bai tap:"));
+        let giuaki = parseInt(prompt("nhap diem bai tap:"));
+        let cuoiki = parseInt(prompt("nhap diem bai tap:"));
+        let dtb = (baitap+giuaki+cuoiki)/3;
+        if (dtb >= 8){
+            alert("Xếp loại giỏi");
+        }else if(dtb >= 6){
+            alert("Xếp loại khá")
+        }else if(dtb >= 5){
+            alert("Xếp loại trung bình");
+        }else {
+            alert("Xếp loại yếu");
+        }
+    </script>
+</body>
+</html>
