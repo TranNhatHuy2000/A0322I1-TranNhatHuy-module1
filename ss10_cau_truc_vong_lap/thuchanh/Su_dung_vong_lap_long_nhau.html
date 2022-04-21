@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+    <style>
+        table, th, td {
+           border: 1px solid
+        }
+    </style>
+</head>
+<body>
+    <script>
+      /*  cách 1 dùng For:
+
+      let table = "<table>";
+        for (let i = 1; i<=10; i++){
+            table += "<tr>";
+            for (j = 1; j <=10;j++){
+                table += "<td>"+i*j+"</td>"
+            }
+            table += "</tr>"
+        }
+        document.write(table + "</table>")
+
+        Cách 2 dùng while:
+        */
+      let i = 1;
+      let j = 1;
+      let table = "<table>";
+      while (i <= 10){
+          table += "<tr>"
+          while (j <=10){
+              table += "<td>"+i*j+"</td>";
+              j++;
+          }
+          table += "</tr>";
+          j=1;
+          i++;
+      }
+      document.write(table + "</table>")
+    </script>
+</body>
+</html>
