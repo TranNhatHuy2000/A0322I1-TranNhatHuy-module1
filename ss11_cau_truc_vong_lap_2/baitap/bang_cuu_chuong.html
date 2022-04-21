@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let table = "<table>"
+        for (let i = 2; i < 10; i++ ){
+            table += "<tr>"
+            for (let j = 1; j <= 10; j++){
+                table +="<td>"+i+"&#215;"+j+"="+i*j+"</td>"
+            }
+            table +="</tr>"
+        }
+        document.write(table + "</table>")
+    </script>
+</body>
+</html>
