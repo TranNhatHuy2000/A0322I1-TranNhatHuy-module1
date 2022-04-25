@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+    <button onclick="game()">chơi</button>
+    <script>
+        function game(){
+            let num = parseInt(prompt("nhập khoảng muốn đoán từ 0...đến n:"));
+            let answ = parseInt(prompt("đoán số trong khoảng o đến "+ num +" :"))
+            let result = Math.floor(Math.random()*num)
+            while (answ !== result){
+                if (answ < result){
+                    alert("nhập lại số lớn hơn")
+                    answ = parseInt(prompt("số đó là:"))
+                }else if (answ > result) {
+                    alert("nhập lại số bé hơn hơn")
+                    answ = parseInt(prompt("số đó là:"))
+                }
+            }
+            alert("Chúc mừng bạn đoán đúng số đó là : số "+result)
+        }
+
+    </script>
+</body>
+</html>

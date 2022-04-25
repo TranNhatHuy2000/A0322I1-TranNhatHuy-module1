@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+    <script>
+        let n3 ;
+        n1 = 0 ;
+        n2 = 1 ;
+        n3 = n1 +n2
+        document.write("số đầu tiên của fibonaci chia hết cho 5 là: ")
+        for (let i = 0; i<20; i++){
+            n1 = n2
+            n2 = n3
+            n3 = n1 +n2
+            if (n3%5==0){
+                document.write(n3)
+                break
+            }
+        }
+    </script>
+</body>
+</html>
