@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt("nhập số tiền gửi (VNĐ):"));
+    let month = parseInt(prompt("nhập số tháng gửi:"));
+    let interest = parseInt(prompt("nhập số lãi suất:"))
+    let profit;
+    interest = interest/100
+    let total =0 ;
+    for (let i = 1; i <= month;i++){
+        profit = money *interest;
+        money += profit
+        total = money
+    }
+    alert("tiền lãi mới là:"+total +"VND");
+</script>
+</body>
+</html>
