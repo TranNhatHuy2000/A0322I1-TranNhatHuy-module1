@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<script>
+    let index;
+    let eng = [
+        "dog",
+        "cat",
+        "chicken",
+        "Cow",
+        "Calf",
+        "duck",
+        "fox",
+        "lion",
+        "bear",
+        "elephant",
+        "wolf",
+        "Lazy Fat Dog",
+    ]
+    let vn = [
+        "cho",
+        "meo",
+        "ga",
+        "bo",
+        "be",
+        "vit",
+        "cao",
+        "su tu",
+        "gau",
+        "voi",
+        "soi",
+        "Đột"
+    ]
+    let input = prompt("Nhập tên con vật bạn muốn biết tiếng anh của nó:")
+        if (vn.indexOf(input) !==-1){
+            document.write("tên tiếng anh của con "+input+" là: "+eng[vn.indexOf(input)])
+
+        }else {
+            alert("not found")
+        }
+    
+</script>
+
+</body>
+</html>
