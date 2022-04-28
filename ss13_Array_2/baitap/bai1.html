@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+    <script>
+        /*Bài 1
+        let color = ["red","green","white","black"]
+        let string = "";
+        for (let i = 0;i < color.length ; i++){
+            string += color[i]+",";
+        }
+        console.log(string)
+        cách tham khảo:
+        */
+        let color = ["red","green","white","black"];
+        let string = color.toString();
+        document.write("kết quả trả về của bài 1 là: "+string+"<br>")
+        /*
+
+   ---------------------------------------------------------------
+
+        Bài 2:
+         */
+        let input2 = prompt("nhập dãy số bất kỳ đê:");
+        let result2 = [];
+        for (let i = 0;i< input2.length ;i++){
+            if(input2[i-1]%2 == 0 && input2[i]%2 == 0){
+                result2.push('-',input2[i])
+            }else {
+                result2.push(input2[i]);
+            }
+        }
+        document.write("kết quả trả về của bài 2 là: "+result2.join("")+"<br>");
+        /*
+
+ -------------------------------------------------------------------
+
+        Bài 3
+        */
+        let input3 = prompt("nhập chuỗi chữ bất kỳ đê:");
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result3 = [];
+        for (let j = 0; j < input3.length ;j++){
+            if (UPPER.indexOf(input3[j]) !==-1){
+                result3.push(input3[j].toLocaleLowerCase())
+            }else if (LOWER.indexOf(input3[j] !==-1)){
+                result3.push(input3[j].toLocaleUpperCase())
+            }else {
+                result3.push(input3[j])
+            }
+        }
+        document.write("kết quả trả về của bài 3 là: "+result3.join(""));
+    </script>
+</body>
+</html>
