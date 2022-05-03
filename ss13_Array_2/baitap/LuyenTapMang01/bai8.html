@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+    <script>
+        let number = Array(10)
+        for (let i = 0; i < number.length; i++) {
+            number[i] = parseInt(prompt("nhập 10 số nguyên bất kì"))
+        }
+        function compareNumbers(a, b) {
+            return a - b;
+        }
+        document.write(number.sort(compareNumbers).reverse());
+    </script>
+</body>
+</html>

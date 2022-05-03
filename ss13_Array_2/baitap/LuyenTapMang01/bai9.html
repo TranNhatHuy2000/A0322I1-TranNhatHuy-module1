@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+    <script>
+        let a = Array()
+        let b = Array ()
+        let c = Array()
+        for (let i = 0; i < 10; i++) {
+            a[i] = parseInt(prompt("nhập 10 số nguyên bất kì cho mảng a"));
+        }for (let j = 0; j < 10; j++) {
+            b[j] = parseInt(prompt("nhập 10 số nguyên bất kì cho mảng b"));
+        }
+        document.write("Mảng a là: "+ a+"<br>")
+        document.write("Mảng b la: "+b+"<br>")
+        c = a
+        for (k = 0; k < 10;k++){
+            c.push(b[k])
+        }
+        document.write("Mảng c là: "+ c)
+    </script>
+</body>
+</html>

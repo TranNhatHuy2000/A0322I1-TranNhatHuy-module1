@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+    <h2>exercise 5 Screen</h2>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <div id="result"></div>
+<script>
+    let x =0;
+    let array = Array();
+    let result = [];
+    function add_element_to_array() {
+        array[x] = parseInt(document.getElementById("txtValue").value);
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("txtValue ").value ="";
+    }
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+            if (array[i] < 0){
+                result.push(array[i])
+            }
+        }
+        document.getElementById("result").innerHTML = e + "có " + result.length+" số nguyên âm là: "+result.toString();
+    }
+</script>
+</body>
+</html>

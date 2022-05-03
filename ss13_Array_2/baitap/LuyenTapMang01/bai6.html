@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 6</title>
+</head>
+<body>
+    <h2>exercise 6 Screen</h2>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnDisplay" value="Kiểm tra" onclick="display_array();"/>
+    <div id="result"></div>
+<script>
+    let number = Array(10)
+    for (let i = 0; i < number.length; i++) {
+         number[i] = parseInt(prompt("nhập 10 số nguyên bất kì"))
+    }
+    document.getElementById("result").innerHTML = "Mảng vừa mới nhập là: " + number + "<br>";
+    console.log(number)
+    function display_array() {
+        let value = parseInt(document.getElementById("txtValue").value)
+        if (number.indexOf(value) !== -1){
+            document.getElementById("result").innerHTML = "V is in the array";
+        }else {
+            document.getElementById("result").innerHTML =  "V is not in the array";
+        }
+
+    }
+</script>
+</body>
+</html>
