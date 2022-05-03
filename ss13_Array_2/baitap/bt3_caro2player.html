@@ -2,9 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Caro</title>
 </head>
 <body>
+    <p id="carogame"/>
+    <script>
+        b = document.getElementById("carogame");
+        let board = [];
+        let data = "";
+        for (let i =0; i < 3;i++){
+            board[i] = new Array(".",".",".");
+        }
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                data += board[i][j] + " &emsp; &emsp; &emsp;";
+            }
+            data += "<br/><br/><br/>";
+        }
+        data += "<input type='button' value='Player 1' onclick='Player1()'> "+" <input type='button' value='Player 2' onclick='Player2()'>"
+        b.innerHTML = data;
 
+        function Player1() {
+            let p1 = prompt("Nhập vị trí muốn đánh đê con lợn số 1:");
+            data = "";
+            board[p1[0]][p1[1]] = "X";
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    data += board[i][j] + " &emsp; &emsp; &emsp;";
+                }
+                data += "<br/><br/><br/>";
+            }
+            data += "<input type='button' value='Player 1' onclick='Player1()'> " + " <input type='button' value='Player 2' onclick='Player2()'>"
+            b.innerHTML = data;
+           // console.log(board)
+
+           /* let check ="";
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    check += board[i][j];
+                }
+            }
+            if(check.indexOf("xxx") !== -1){
+                alert("p1 win")
+            }*/
+        }
+        function Player2(){
+            let p2 = prompt("Nhập vị trí muốn đánh đê con lợn số 2:");
+            data = "";
+            board[p2[0]][p2[1]] = "O";
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    data += board[i][j] + " &emsp; &emsp; &emsp;";
+                }
+                data += "<br/><br/><br/>";
+            }
+            data += "<input type='button' value='Player 1' onclick='Player1()'> "+" <input type='button' value='Player 2' onclick='Player2()'>"
+            b.innerHTML = data;
+        }
+
+
+    </script>
 </body>
 </html>
