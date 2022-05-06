@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+    <script>
+        let starName = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe" ,"Regulus"];
+        let constellation = ["Ursa","Minor", "Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+        let input = prompt("nhập tên ngôi sao bạn muốn tìm")
+        let search1 = search(input)
+        document.write("chòm sao tương ứng của "+input+ " là: "+search1)
+
+        function search(name) {
+               if (starName.indexOf(name) !== -1){
+                  result =  constellation[starName.indexOf(name)]
+                   return result;
+               }else {
+                  alert("không tìm thấy tên ngôi sao")
+               }
+        }
+    </script>
+</body>
+</html>
