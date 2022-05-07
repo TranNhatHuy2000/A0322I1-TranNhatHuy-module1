@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+    <script>
+        let Input = prompt("nhập kí tự bất kì");
+        let number = ["0","1","2","3","4","5","6","7","8","9"];
+        let result = check(Input);
+        document.write(result);
+        function check(input) {
+            if (number.indexOf(input) !== -1){
+                return true
+            }else {
+                return  false
+            }
+        }
+    </script>
+</body>
+</html>

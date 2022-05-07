@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+    <script>
+        let arr = Array(3);
+        for (let i = 0; i < arr.length; i++){
+            arr[i] = parseInt(prompt("Nhập số:"));
+        }
+        result = min(arr);
+        document.write("số nhỏ nhất là:"+result)
+        function min(array) {
+            let min = arr[0];
+            for (let j = 1;j <arr.length;j++){
+                if (arr[j]<arr[0]){
+                    min = arr[j];
+                }
+            }
+            return min
+        }
+    </script>
+</body>
+</html>

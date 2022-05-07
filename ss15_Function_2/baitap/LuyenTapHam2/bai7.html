@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        let number1 = parseInt(prompt("nhập số thứ 1"));
+        let number2 = parseInt(prompt("nhập số thứ 2"));
+        document.write("trước khi đổi chỗ: num1 = "+number1+" ,num2 = "+number2+"<br>");
+        let result = swap(number1,number2);
+        document.write("sau khi đổi chỗ: num1 = "+result[0]+" ,num2="+result[1]+"<br>");
+        function  swap(num1,num2) {
+            let Swap = [num2,num1];
+            return Swap
+        }
+    </script>
+</body>
+</html>

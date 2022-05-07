@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Nhập số:"))
+        let result = check(number);
+        document.write(result)
+        function check(num) {
+            if(num == 0){
+                alert("số 0 không phải là số nguyên âm cũng không phải là sô nguyên dương")
+            }else if(num > 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

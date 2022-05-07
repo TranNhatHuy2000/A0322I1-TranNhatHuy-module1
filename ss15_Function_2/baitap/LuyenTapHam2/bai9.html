@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+    <script>
+        let Arr = Array(5);
+        for (let i = 0; i <Arr.length; i++){
+            Arr[i] = prompt("Nhập vào mảng cho vị trí "+i);
+        }
+        let Input = prompt("nhập ký tự bất kỳ");
+        let result = check(Input,Arr);
+        document.write("số lần ký tự "+Input+" xuất hiện là: "+result)
+        function check(input,array) {
+            let count=0;
+            for (let i=0; i<array.length; i++){
+                if (input == array[i]) {
+                    count++
+                }
+            }
+            if(count > 0){
+                return count
+            }else {
+                return -1
+            }
+
+        }
+    </script>
+</body>
+</html>

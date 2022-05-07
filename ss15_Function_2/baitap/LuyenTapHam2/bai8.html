@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+    <script>
+        let Arr = Array(5)
+        for (let i = 0;i < Arr.length;i++){
+            Arr[i] = parseInt(prompt("nhập số ở ví trí:"+i+" của mảng"))
+        }
+        document.write("Mảng sau khi nhập là :"+Arr+"<br>")
+        let result = Reverse(Arr)
+        document.write("Mảng sau khi đâỏ là :"+result)
+        function Reverse(arr) {
+            arr.reverse()
+            return arr
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("nhập số:"));
+        let result = Factorial(number)
+        document.write("Giai thừa của: "+number+" là: "+result)
+
+        function Factorial(num) {
+            let factorial = 1;
+            if(num >= 1){
+                for (let i=1; i <= num; i++){
+                    factorial = factorial * i;
+                }
+            }else if(num == 0 ){
+                factorial =  1;
+            }else{
+                return "không xác định";
+            }
+            return factorial;
+        }
+    </script>
+</body>
+</html>
