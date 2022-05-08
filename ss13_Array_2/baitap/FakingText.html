@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking text</title>
+</head>
+<body onload="fakeType()">
+<h2> Type anything</h2>
+<textarea cols="40" rows="10" id="txt"></textarea>
+<script>
+    let array = ["N","h","ậ","t"," ","H","u","y"," ","đ","ẹ","p"," ","z","a","i"];
+    let str ="";
+    function fakeType() {
+        let text = document.getElementById("txt").value;
+        for (let i = 0 ; i<text.length;i++){
+            str += array[i]
+            if (i === array.length){
+                str = ""
+            }
+        }
+        document.getElementById("txt").value = str;
+        str = "";
+        setTimeout("fakeType()", 1);
+    }
+</script>
+</body>
+</html>
