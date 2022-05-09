@@ -6,21 +6,27 @@
 </head>
 <body>
     <script>
+        let a = parseInt(prompt("nhập số nguyên bất kỳ")) ;
         function isPrime(number) {
-            if (number == 2){
-                return number + " là số nguyên tố"
+            let flag = true;
+            if (number < 2){
+                flag = false;
             }else {
-                for (let i = 2; i < number;i++ ){
-                    if (number%i !== 0  ){
-                        return number + " là số nguyên tố"
-                    }else {
-                        return number + " không phải là số nguyên tố"
+                for (let i = 2; i < number ; i++ ){
+                    if (number%i == 0  ){
+                        flag = false;
+                        break
                     }}
             }
 
-        }
+            if (flag == true){
+                return 'Là số nguyên tố';
+            }
+            else{
+                return 'Không phải là số nguyên tố';
+            }
 
-        let a = parseInt(prompt("nhập số nguyên bất kỳ")) ;
+        }
         let result = isPrime(a)
         alert(result)
     </script>
