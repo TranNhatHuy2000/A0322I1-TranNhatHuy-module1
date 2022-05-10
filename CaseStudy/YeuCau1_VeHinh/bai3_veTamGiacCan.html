@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giac can</title>
+</head>
+<body>
+    <script>
+        //1 tam giác cân có chiều cao h thì đáy của nó là 2h-1.vd bài ni h = 5
+        let n = 5
+        let m = 5
+        for (let i = 1;i<=5;i++){
+            for (let j = 1;j<=(5*2-1);j++){
+                if (j>=m && j<=n ){
+                    document.write(" *")
+                }else {
+                    document.write(" &ensp;")
+                }
+            }
+            n++;
+            m--;
+            document.write("<br><br>")
+        }
+    </script>
+</body>
+</html>

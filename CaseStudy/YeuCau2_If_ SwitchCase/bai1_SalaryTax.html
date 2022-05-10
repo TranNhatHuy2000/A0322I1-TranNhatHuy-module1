@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế tiền lương</title>
+</head>
+<body>
+    <!--
+    20% thuế thu nhập nếu lương là 15 triệu.
+    10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
+    5% thuế thu nhập nếu lương dưới 7 triệu
+    -->
+    <script>
+        let Salary = parseInt(prompt("nhập tiền lương của bạn (triệu):"))
+        let Result = tax(Salary)
+        alert("Số tiền lương thực tế bạn nhận được là: "+Result+" (triệu)")
+        function tax(salary) {
+            let RealSalary;
+            if(salary <7){
+                RealSalary =salary - (salary*0.05)
+            }else if (salary<15){
+                RealSalary =salary - (salary*0.1)
+            }else {
+                RealSalary =salary - (salary*0.2)
+            }
+            return RealSalary
+        }
+
+    </script>
+</body>
+</html>

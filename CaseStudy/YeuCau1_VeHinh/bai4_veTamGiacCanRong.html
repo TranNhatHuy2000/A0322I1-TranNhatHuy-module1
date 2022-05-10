@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác cân rỗng</title>
+</head>
+<body>
+    <script>
+    let n = 5
+    let m = 5
+    for (let i = 1;i<=5;i++){
+        for (let j = 1;j<=(5*2-1);j++){
+            if (j==m || j==n ||i==5){
+                document.write(" *")
+            }else {
+                document.write(" &ensp;")
+            }
+        }
+        n++;
+        m--;
+        document.write("<br><br>")
+    }
+    </script>
+</body>
+</html>
