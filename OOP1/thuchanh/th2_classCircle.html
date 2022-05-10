@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+    <script>
+        class Circle{
+            constructor(radious) {
+            this.radious = radious;
+            }
+            getRadius(){
+                return this.radious;
+            }
+            getArea(){
+                return Math.PI * this.radious * this.radious;
+            }
+        }
+        let circle = new Circle(2);
+        let radius = circle.getRadius();
+        let area = circle.getArea();
+        alert("radius: " + radius + "; area: " + area)
+    </script>
+</body>
+</html>
