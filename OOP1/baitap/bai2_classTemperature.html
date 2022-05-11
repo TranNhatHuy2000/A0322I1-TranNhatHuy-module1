@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(c) {
+                this.c =c
+            }
+            getTemperature(){
+                return this.c
+            }
+            getFahrenheit(){
+                return this.c*(9/5)+32
+            }
+            getKenvin(){
+                return this.c+ 273.15
+            }
+        }
+        let temperature = new Temperature(25);
+        let C = temperature.getTemperature()
+        let F = temperature.getFahrenheit();
+        let K = temperature.getKenvin();
+        document.write("nhiệt độ:"+C+" chuyển sang độ F và kenvin tương ứng lần lượt là: "+F+"; "+K)
+    </script>
+</body>
+</html>
