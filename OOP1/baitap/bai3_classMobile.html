@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+    <script>
+
+        class Mobile{
+            constructor(name,status) {
+                this.name = name
+                this.pin = 100;
+                this.msg = "";
+                this.status= status
+                this.send = "";
+            }
+            checkOnOF(){
+                if(this.status =="on"){
+                    alert("điện thoại đang bật");
+                }else if(this.status =="off"){
+                    alert("điện thoại đã tắt ");
+                }
+            }
+            turnOn(){
+                this.status = "on";
+                alert("Điện thoại đã được bật")
+            }turnOff(){
+                this.status = "off";
+                alert("Điện thoại đã tắt")
+
+            }
+            checkPin(){
+                if(this.status == "on"){
+                    return "pin còn "+ this.pin+" % "
+                }else if (this.status == "of"){
+                    alert("Máy đã bật mô??")
+                }
+
+            }
+            charge(){
+                this.pin = 100
+                alert("Đã sạc đầy pin");
+            }
+            setMessage(msg){
+                this.msg = msg;
+            }
+            getMessage(){
+                return this.msg;
+            }
+            sentMessage(msg,mobile){
+            if(this.status == "on"){
+                this.pin--
+                mobile.setMessage(msg)
+            }else if (this.status == "off"){
+                alert("Máy đã bật mô??")
+            }
+            }
+            checkSend(){
+                if(this.status == "on"){
+                    this.pin--
+                    this.send += this.name+" : "+message+"<br>"
+                    return this.send
+                }else if (this.status == "off"){
+                    alert("Máy đã bật mô??")
+                }
+
+            }
+        }
+        let mobile1 = new Mobile("Iphone","off");
+        let mobile2 = new Mobile("samsung","off");
+        mobile1.turnOn();
+        mobile1.sentMessage("hello2",mobile2);
+        let message = mobile2.getMessage();
+        alert(message)
+        let checkpin = mobile1.checkPin()
+        alert(checkpin)
+        let checksend = mobile1.checkSend()
+        document.write(checksend)
+
+    </script>
+</body>
+</html>
