@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor(weight) {
+                this.weight = weight
+            }
+
+            decrease(){
+                if(this.weight > 0){
+                    this.weight --;
+                }
+            }
+            isEmpty(){
+                if(this.weight==0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            getWeight(){
+                return this.weight
+            }
+        }
+
+        class Human{
+            constructor(name, gender, weight) {
+                this.name = name
+                this.gender = gender
+                this.weight = weight
+            }
+
+             isMale(){
+                if (this.gender == "Male"){
+                    return true;
+                }else {
+                    return false;
+                 }
+             }
+            setGender(gender){
+                this.gender = gender
+            }
+            checkApple(apple){
+                return apple.isEmpty();
+            }
+            eat(apple){
+                if (apple.getWeight()>0){
+                    this.weight ++;
+                    apple.decrease();
+                }
+            }
+            say(content){
+                document.write(this.name + " say: " + content + "<br>");
+            }
+            getName(){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+            getWeight(){
+                return this.weight;
+            }
+            setWeight(weight){
+                this.weight = weight
+            }
+        }
+        let apple = new Apple(10);
+
+        let adam = new Human("Adam","Male",70)
+        let eva = new Human("Eva", "Female", 50);
+
+        //alert(adam.isMale());
+        while (!apple.isEmpty()){
+            adam.eat(apple);
+            eva.eat(apple);
+        }
+
+        document.write(adam.getWeight()+"<br>");
+        document.write(eva.getWeight()+"<br>");
+        document.write(apple.getWeight()+"<br>");
+        adam.say("Hello")
+        eva.say("oke?")
+
+    </script>
+</body>
+</html>
