@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Quản lí sách</h1><br><br><br><br><br><br><br><br>
+    <table id="output" border = '1px solid black'></table>
+    <div style="text-align: center">
+        <button onclick="addQuantity()">Thêm sách đã có</button>
+        <button onclick="addNewBook()">Thêm sách mới</button>
+        <button onclick="muonsach()">Mượn sách</button>
+        <button>Hiển thị sách nhiều nhất</button>
+    </div>
+    <script>
+        let dataHTML ="";
+        let arrayBook = [];
+        class Book {
+            constructor(id,name,year,quantity,status){
+                this.id = id
+                this.name = name;
+                this.year = year;
+                this.quantity = quantity;
+                this.status = status;
+            }
+            getName(){
+                return this.name;
+            }
+            getId() {
+                return this.id;
+            }
+            getYear() {
+                return this.year;
+            }
+            getQuantity() {
+                return this.quantity;
+            }
+            getStatus() {
+                return this.status;
+            }
+            setName(nameNew){
+                this.name = nameNew;
+            }
+            setId(idNew){
+                this.id = idNew;
+            }
+            setYear(yearNew){
+                this.year = yearNew;
+            }
+            setQuantity(quantityNew){
+                this.quantity = quantityNew;
+            }
+            setStatus(statusNew){
+                this.status = statusNew;
+            }
+        }
+        function showTable() {
+            dataHTML =
+                "<tr>" +
+                "<th>Mã số sách</th>" +
+                "<th>Tên sách</th>" +
+                "<th>Năm xuất bản</th>" +
+                "<th>Số quyển</th>" +
+                "<th>Tình trạng</th>" +
+                "</tr>"
+            for (let index in arrayBook){
+                dataHTML +=
+                    "<tr>"+
+                    "<td>"+arrayBook[index].getId()+"</td>"+
+                    "<td>"+arrayBook[index].getName()+"</td>"+
+                    "<td>"+arrayBook[index].getYear()+"</td>"+
+                    "<td>"+arrayBook[index].getQuantity()+"</td>"+
+                    "<td>"+arrayBook[index].getStatus()+"</td>"+
+
+                    "</tr>"
+            }
+            document.getElementById('output').innerHTML = dataHTML;
+        }
+
+        function addNewBook() {
+            let inputId = parseInt(prompt("Nhập mã số sách"))
+            let inputName = prompt("Nhập tên sách")
+            let inputYear = prompt("Nhập năm xuất bản")
+            let inputQuantity = prompt("Nhập số lượng ")
+            let inputStatus = prompt("Nhập tình trạng")
+            let newBook = new Book(inputId,inputName,inputYear,inputQuantity,inputStatus)
+            if(inputName !== "" && inputId!== "" && inputYear!== "" && inputQuantity!== "" && inputStatus!== ""){
+                arrayBook.push(newBook);
+            }
+            showTable();
+        }
+
+        function addQuantity(){
+            let id = parseInt(prompt("nhập id sách muốn thêm"));
+            for (let i = 0; i <arrayBook.length; i++){
+                if (id == arrayBook[i].getId()){
+                    id = i
+                }
+            }
+            let amount = parseInt(prompt("nhập số lượng muốn thêm"));
+            let newQuantity=parseInt(arrayBook[id].getQuantity())+amount;
+            arrayBook[id].setQuantity(newQuantity);
+            showTable();
+        }
+
+        function muonsach(){
+            let id = parseInt(prompt("nhập id sách muốn mượn"));
+            for (let i = 0; i <arrayBook.length; i++){
+                if (id == arrayBook[i].getId()){
+                    id = i
+                }
+            }
+            let amount = parseInt(prompt("nhập số lượng muốn mượn"));
+            let newQuantity=parseInt(arrayBook[id].getQuantity())-amount;
+            arrayBook[id].setQuantity(newQuantity);
+            showTable();
+        }
+
+
+    </script>
+</body>
+</html>

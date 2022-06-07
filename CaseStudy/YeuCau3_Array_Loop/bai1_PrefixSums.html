@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng mảng b là prefix sums của mảng a </title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let b=[];
+        let temp =0;
+        let Length = parseInt(prompt("Nhập độ dài của mảng a:"))
+        for (let i = 0; i < Length; i++){
+            let input = parseInt(prompt("nhập mảng a"));
+            a.push(input)
+        }
+        document.write("Mảng a khi chưa prefix sum là: "+a+"<br>")
+    function preFixSum(arr) {
+        for (let i =0; i < arr.length ; i++){
+            temp += a[i]
+            b[i] = temp
+        }
+        return b;
+    }
+       document.write("Mảng a sau khi prefix sum là: "+preFixSum(a)) ;
+    </script>
+</body>
+</html>

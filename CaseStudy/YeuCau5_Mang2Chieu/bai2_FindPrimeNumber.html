@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let row = parseInt(prompt("Nhập số hàng"));
+        let col = parseInt(prompt("Nhập số cột"));
+
+
+        let arr = new Array(row)
+        let listPrimeNum = []
+        for (let i = 0; i <arr.length;i++){
+            arr[i]= new Array(col)
+        }
+        for (let i = 0; i < row;i++){
+            for (let j = 0;j < col;j++){
+                let value = parseInt(prompt("Nhập giá trị ở hàng " +i+" cột "+j))
+                arr[i][j] = value
+            }
+        }
+        function isPrime(array) {
+            let flag = true;
+            for (let i = 0;i < row ;i++){
+                for (let j = 0; j <col;j++){
+                    if (array[i][j] < 2){
+                        flag = false;
+                    }else {
+                        for (let k = 2; k < array[i][j] ; k++ ){
+                            if (arr[i][j]%k == 0  ){
+                                flag = false;
+                                break
+                            }}
+                    }
+                    if (flag == true){
+                        listPrimeNum.push(arr[i][j])
+                    }
+                }
+            }
+            console.log(listPrimeNum)
+            return listPrimeNum;
+        }
+        console.log(arr)
+        document.write(isPrime(arr))
+    </script>
+</body>
+</html>

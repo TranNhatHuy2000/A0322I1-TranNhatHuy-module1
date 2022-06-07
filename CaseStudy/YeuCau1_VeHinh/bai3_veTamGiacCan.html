@@ -6,21 +6,37 @@
 </head>
 <body>
     <script>
+        //Cách 1:
         //1 tam giác cân có chiều cao h thì đáy của nó là 2h-1.vd bài ni h = 5
-        let n = 5
-        let m = 5
-        for (let i = 1;i<=5;i++){
-            for (let j = 1;j<=(5*2-1);j++){
-                if (j>=m && j<=n ){
-                    document.write(" *")
-                }else {
-                    document.write(" &ensp;")
-                }
+        // let n = 5
+        // let m = 5
+        // for (let i = 1;i<=5;i++){
+        //     for (let j = 1;j<=(5*2-1);j++){
+        //         if (j>=m && j<=n ){
+        //             document.write(" *")
+        //         }else {
+        //             document.write(" &ensp;")
+        //         }
+        //     }
+        //     n++;
+        //     m--;
+        //     document.write("<br><br>")
+        // }
+        //Cách 2:
+
+        let height = parseInt(prompt("Nhập chiều cao"))
+        let width = 2*height-1
+        let shape =""
+        for (let i = 1; i <= height; i++){
+            for (let j =0;j < width/2 - i;j++){
+                shape += "&ensp;"
             }
-            n++;
-            m--;
-            document.write("<br><br>")
+            for (let k =0; k < i*2-1;k++){
+                shape += "*"
+            }
+            shape +="<br>"
         }
+        document.write(shape)
     </script>
 </body>
 </html>

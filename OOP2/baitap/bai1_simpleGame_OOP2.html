@@ -13,46 +13,47 @@
                 this.top = top;
                 this.left = left;
                 this.size = size;
-                this.speed = 20;
+                this.speed = speed;
             }
-                getHeroElement = function(){
+                getHeroElement (){
                     return '<img width="'+ this.size + '"' +
                         ' height="'+ this.size + '"' +
                         ' src="' + this.image +'"' +
                         ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
                 }
 
-                moveRight = function(){
-                    this.left += this.speed;
+                moveRight(){
+                    this.left += 20;
                     console.log('ok: ' + this.left);
                 }
 
-                moveLeft = function(){
-                    this.left -= this.speed;
+                moveLeft(){
+                    this.left -= 20;
                     console.log('ok: ' + this.left);
                 }
 
-                moveDown = function(){
-                    this.top += this.speed;
+                moveDown(){
+                    this.top += 20;
                     console.log('ok: ' + this.top);
                 }
 
-                moveTop = function(){
-                    this.top -= this.speed;
+                moveTop(){
+                    this.top -= 20;
                     console.log('ok: ' + this.top);
                 }
 
 
         }
 
-        var hero = new Hero('pikachu.png', 20, 30, 200,20);
+        let hero = new Hero('pikachu.png', 20, 30, 200,500);
 
         function start(){
             if(hero.left < window.innerWidth - hero.size){
                 hero.moveRight();
             }
+
             document.getElementById('game').innerHTML = hero.getHeroElement();
-            setTimeout(start, 500)
+            setTimeout(start, hero.speed)
         }
 
         start();

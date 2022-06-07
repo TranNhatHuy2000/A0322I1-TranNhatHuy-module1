@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình gọi thức uống đơn giản.</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <div id="menu"></div>
+    <button onclick="chooseDrink()">Chọn món</button>
+    <p id="bill"></p>
+    <script>
+        let menu = ["Cafe","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
+        let price = ["10000","20000","15000","20000","9000","25000"]
+        let num = ["1","2","3","4","5","6","7"];
+        let total = 0;
+        let showmenu ="";
+        for (let i = 0;i <6;i++){
+             showmenu += num[i]+" "+menu[i]+"<br>";
+        }
+        document.getElementById("menu").innerHTML =showmenu;
+        let bill =[];
+
+        function chooseDrink(){
+            let choose = prompt("nhập 1->6 để chọn món, nhập 7 để thanh toán")
+           do {
+                if(num.indexOf(choose)!= -1){
+                    alert("giá của 1 "+menu[num.indexOf(choose)]+" là:"+price[num.indexOf(choose)]+" VNĐ")
+                    let quantity = prompt("Nhập số lượng của món đó:")
+                    bill.push(menu[num.indexOf(choose)]+" :"+quantity);
+                    total += parseInt(quantity)*parseInt(price[[num.indexOf(choose)]]);
+                }
+                else {
+                    alert("số chọn không hợp lệ")
+                }
+               choose = prompt("nhập 1->6 để chọn món, nhập 7 để thanh toán")
+           }while (choose !="7")
+            document.getElementById("bill").innerHTML ="Hóa đơn:<br>"+bill.join("<br>")+"<br>Tổng tiền phải trả là:"+total+"VNĐ"
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm chỉ số của phân số lớn nhất </title>
+</head>
+<body>
+    <script>
+        let numerators = [4, 3, 1];
+        let denominators = [2, 2, 2];
+
+        function maxFraction(numerators, denominators) {
+            let fraction=[];
+            for (let i = 0;i <numerators.length;i++){
+                fraction[i]= numerators[i]/denominators[i]
+            }
+            let max = fraction[0]
+            for (let i =0; i < fraction.length;i++){
+                if(fraction[i]>max){
+                    max = fraction[i]
+                }
+            }
+            return fraction.indexOf(max)
+        }
+
+        document.write("chi so phan sp lon nhat la: "+maxFraction(numerators,denominators))
+    </script>
+</body>
+</html>

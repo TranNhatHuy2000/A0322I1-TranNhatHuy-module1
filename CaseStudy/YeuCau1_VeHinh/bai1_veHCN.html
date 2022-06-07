@@ -6,9 +6,11 @@
 </head>
 <body>
     <script>
-        for(let i = 0;i<4;i++){
-            for(let j = 0;j<5;j++){
-                if (i==0||i==3|j==0|j==4){
+        let height = parseInt(prompt("Nhập chiều cao của HCN"));
+        let width = parseInt(prompt("Nhập chiều rộng của HCN"));
+        for(let i = 1;i<= height;i++){
+            for(let j = 1;j<= width;j++){
+                if (i==1||i==height|j==1|j==width){
                     document.write(" *")
                 }
                else {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A</title>
+</head>
+<body>
+    <script>
+        let A = [];
+        let B = [];
+        let NewArray = [];
+        let lengthA = parseInt(prompt("Nhập độ dài của mảng A:"))
+        for (let i = 0; i < lengthA; i++){
+            let inputA = parseInt(prompt("nhập mảng A"));
+            A.push(inputA)
+        }
+        let lengthB = parseInt(prompt("Nhập độ dài của mảng B:"))
+        for (let i = 0; i < lengthB; i++){
+            let inputB = parseInt(prompt("nhập mảng B"));
+            B.push(inputB)
+        }
+
+        for (let i = 0; i < B.length;i++){
+            if (A.indexOf(B[i]) ==-1 && NewArray.indexOf(B[i]) ==-1){
+                NewArray.push(B[i])
+            }
+        }
+        document.write("Mảng A là:"+ A+"<br>");
+        document.write("Mảng B là:"+ B+"<br>");
+        document.write("Missing Value(A,B) là:"+ NewArray);
+    </script>
+</body>
+</html>

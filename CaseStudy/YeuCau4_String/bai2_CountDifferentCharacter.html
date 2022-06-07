@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lượng kí tự khác nhau trong xâu</title>
+</head>
+<body>
+    <script>
+      /*  let input = prompt("Nhập chuỗi bất kì");
+        let count = 1;
+        let flag ;
+        function countDifferentChar(string) {
+            for (let i = 0;i <string.length;i++){
+                for (let j = 0; j < i ;j++){
+                    if (string[j]==string[i]){
+                        flag = 1
+                        break;
+                    }else{
+                        flag = 0
+                    }
+                }
+                if (flag == 0){
+                    count ++
+                }
+            }
+            return count;
+        }
+        document.write(countDifferentChar(input))*/
+
+
+      let input = prompt("Nhập chuỗi bất kì");
+      function countDifferentChar(string) {
+          let arr =[];
+          for (let i = 0;i < string.length;i++){
+            if(arr.indexOf(string.charAt(i)) === -1){
+                arr.push(string.charAt(i));
+            }
+          }
+          return arr.length;
+      }
+      document.write("so ki tu khac nhau trong chuoi la: "+countDifferentChar(input))
+    </script>
+</body>
+</html>

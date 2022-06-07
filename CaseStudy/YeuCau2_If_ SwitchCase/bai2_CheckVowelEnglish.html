@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình kiểm tra một ký tự nguyên âm hay phụ âm</title>
+</head>
+<body>
+    <script>
+       /*
+       let input = prompt("Nhập 1 ký tự bất kì để kiểm tra:")
+        let vowels = ["u","e","o","a","i"]
+        if (vowels.indexOf(input.toLowerCase()) !== -1){
+            alert(input+" là kí tự nguyên âm")
+        }else {
+            alert(input+" là kí tự phụ âm")
+        }
+        */
+
+        //cach 2:
+       let input = prompt("Nhập 1 ký tự bất kì để kiểm tra:");
+       input = input.toLowerCase();
+       switch (input) {
+        case "u" :
+        case "e" :
+        case "o" :
+        case "a" :
+        case "i" :
+            alert(input+" là kí tự nguyên âm");
+            break;
+         default:
+             alert(input+" là kí tự phụ âm");
+       }
+
+    </script>
+</body>
+</html>

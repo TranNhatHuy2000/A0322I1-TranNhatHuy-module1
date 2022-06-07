@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let lengthArr = parseInt(prompt("Nhập độ dài của mảng bé hơn 50:"))
+        for (let i = 0; i < lengthArr; i++) {
+            let input = parseInt(prompt("nhập phần tử ở vị trí " + i + " của mảng"));
+            arr.push(input);
+        }
+
+        let sum = 0;
+        let avg ;
+        let count=0;
+
+        function findAvg(array) {
+            for (let i = 0; i< array.length;i++){
+                if(i%2===0 && arr[i]%2 !== 0){
+                    count++;
+                    sum += arr[i];
+                }
+            }
+            console.log(count);
+            console.log(sum)
+            avg = sum/count;
+            return avg;
+        }
+        document.write("Mảng vừa nhập là: "+arr+"<br>");
+        document.write("Trung bình cộng các số lẻ ở vị trí chẵn là: "+findAvg(arr));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa</title>
+</head>
+<body>
+    <script>
+        let input = prompt("nhập một chuỗi bất kì")
+        function chuanHoa(string) {
+            string = string.trim().toLowerCase();
+            let tempt = string.split(" ")
+            let st=""
+            let Maxlength = tempt[0]
+            for (let i = 0; i < tempt.length;i++){
+               st += tempt[i].charAt(0).toLocaleUpperCase()+tempt[i].slice(1)
+                console.log(st)
+                if(i <tempt.length-1){
+                st += " "
+                }
+            }
+            for (let i = 1 ; i <tempt.length;i++){
+                if (tempt[i].length > Maxlength.length){
+                    Maxlength = tempt[i]
+                }
+            }
+           return [st,Maxlength]
+        }
+        document.write("Chuỗi sau khi đã chuẩn hóa là: "+ chuanHoa(input)[0]+"<br> Từ dài nhất là:"+ chuanHoa(input)[1])
+    </script>
+</body>
+</html>

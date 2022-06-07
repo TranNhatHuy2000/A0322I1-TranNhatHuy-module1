@@ -6,15 +6,16 @@
 </head>
 <body>
     <script>
-        for(let i=1;i<=5;i++){
+        let height = parseInt(prompt("Nhập chiều cao của tam giác:"))
+        for(let i=1;i<=height;i++){
             for (let j=1;j<=i;j++){
-            if(j==1|j==i|i==5){
+            if(j==1|j==i|i==height){
                 document.write("  *")
             }else {
                 document.write(" &ensp;")
             }
             }
-            document.write("<br><br>")
+            document.write("<br>")
         }
     </script>
 </body>
